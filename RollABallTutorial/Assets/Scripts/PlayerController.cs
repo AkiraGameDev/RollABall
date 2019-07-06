@@ -18,6 +18,11 @@ public class PlayerController : MonoBehaviour {
         SetCountText();
     }
 
+    void Update() {
+        if (Input.GetKey("escape"))
+            Application.Quit();
+    }
+
     void FixedUpdate() {
         float moveHorizontal = Input.GetAxis ("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
