@@ -54,7 +54,7 @@ public class PlayerController : MonoBehaviour {
 
     void Update() {
         if (Input.GetKey("escape"))
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);;
+            Application.Quit();
         if(Input.GetKey("left shift") && stamina > 0){
             speed = curSprintSpeed;
             trailRenderer.emitting = true;
@@ -124,8 +124,8 @@ public class PlayerController : MonoBehaviour {
 
     void SetCountText() {
         countText.text = "Pips Collected: " + count.ToString();
-        if (count >= 12) {
-            winText.text = "You monster...";
+        if (count >= 24) {
+            winText.text = "If only we had more time...";
         }
     }
     void SetLivesText() {
